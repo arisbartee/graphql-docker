@@ -1,0 +1,30 @@
+{
+  "name": "bway_gql",
+  "version": "1.0.0",
+  "description": "Graphql server for broadway.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=development && nodemon src/index.js --exec babel-node"
+  },
+  "author": "Aris Bartee",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-yoga": "^1.16.7",
+    "join-monster": "^2.1.0",
+    "join-monster-graphql-tools-adapter": "arisbartee/join-monster-graphql-tools-adapter",
+    "knex": "^0.15.2",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.7"
+  }
+}

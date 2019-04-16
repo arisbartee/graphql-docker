@@ -1,0 +1,11 @@
+FROM node:10-alpine
+
+ENV PROVISION_CONTEXT "development"
+
+# Deploy scripts/configurations
+COPY etc/             /opt/docker/etc/
+
+
+
+# Configure volume/workdir
+WORKDIR /app/
