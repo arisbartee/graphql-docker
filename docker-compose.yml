@@ -1,0 +1,27 @@
+version: '2'
+services:
+  #######################################
+  # PHP application Docker container
+  #######################################
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    ports:
+      - "4000:4000"
+    
+    volumes:
+      - ./app/:/app/
+    # cap and privileged needed for slowlog
+    cap_add:
+      - SYS_PTRACE
+    privileged: true
+    env_file:
+      - etc/environment.yml
+    environment:
+      - VIRTUAL_HOST=.app.boilerplate.docker
+      - VIRTUAL_PORT=4000
+    tty: true
+    command: npm run start
+
+ 
